@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Forest-Adventures
+//  ForestAdventures
 //
 //  Created by Brandi Bailey on 4/27/20.
 //  Copyright © 2020 Brandi Bailey. All rights reserved.
