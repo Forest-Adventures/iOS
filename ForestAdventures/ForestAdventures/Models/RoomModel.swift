@@ -12,4 +12,10 @@ struct Room: Codable {
     let name: String
     let description: String
     let item: Item?
+    
+    init(name: String, description: String, item: Item) {
+        self.name = name
+        self.description = description
+        self.item = item
+    }
 }

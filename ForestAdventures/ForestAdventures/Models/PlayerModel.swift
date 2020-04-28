@@ -11,4 +11,9 @@ import Foundation
 struct Player: Codable {
     let currentRoom: Room
     let playerItems: [Item]
+    
+    init(currentRoom: Room, playerItems: [Item]) {
+        self.currentRoom = currentRoom
+        self.playerItems = playerItems
+    }
 }
