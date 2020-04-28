@@ -1,5 +1,5 @@
 //
-//  CharacterModel.swift
+//  PlayerModel.swift
 //  ForestAdventures
 //
 //  Created by Jerry haaser on 4/28/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Character: Codable {
+struct Player: Codable {
     let currentRoom: Room
-    let characterItems: [Item]
+    let playerItems: [Item]
 }
