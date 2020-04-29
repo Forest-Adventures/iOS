@@ -34,18 +34,614 @@
         <!--Bag-->
         <scene sceneID="ZQI-Wa-Tlr">
             <objects>
-                <viewController id="5ae-K1-Edo" sceneMemberID="viewController">
+                <viewController id="5ae-K1-Edo" customClass="BagViewController" customModule="ForestAdventures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNY-a0-vE5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWz-hn-oRC">
+                                <rect key="frame" x="155.5" y="84" width="103" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="sPY-5G-b4p">
+                                <rect key="frame" x="196" y="141" width="198" height="172"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="7yR-SH-YUh">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E94-Pr-bnm">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="E94-Pr-bnm" secondAttribute="height" multiplier="1:1" id="Qg2-fj-j5M"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPP-ZF-h5v">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qPP-ZF-h5v" secondAttribute="height" multiplier="1:1" id="sz8-dl-vYD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-i8-ciY">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7BK-i8-ciY" secondAttribute="height" multiplier="1:1" id="PnP-e6-ZCW"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qPP-ZF-h5v" firstAttribute="width" secondItem="qPP-ZF-h5v" secondAttribute="height" multiplier="1:1" id="2iw-oI-eQH"/>
+                                            <constraint firstItem="7BK-i8-ciY" firstAttribute="width" secondItem="7BK-i8-ciY" secondAttribute="height" multiplier="1:1" id="lSv-ab-MmB"/>
+                                            <constraint firstItem="7BK-i8-ciY" firstAttribute="width" secondItem="7BK-i8-ciY" secondAttribute="height" multiplier="1:1" id="zU7-pG-8vH"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="csS-T2-N3W">
+                                        <rect key="frame" x="0.0" y="61" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUO-ln-onh">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CUO-ln-onh" secondAttribute="height" multiplier="1:1" id="zsJ-zs-kib"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nkg-7z-PGf">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Nkg-7z-PGf" secondAttribute="height" multiplier="1:1" id="2Lm-rQ-25f"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GdJ-xz-fpa">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GdJ-xz-fpa" secondAttribute="height" multiplier="1:1" id="h2G-Qa-wlp"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GdJ-xz-fpa" firstAttribute="width" secondItem="GdJ-xz-fpa" secondAttribute="height" multiplier="1:1" id="D1m-Xk-fx5"/>
+                                            <constraint firstItem="GdJ-xz-fpa" firstAttribute="width" secondItem="GdJ-xz-fpa" secondAttribute="height" multiplier="1:1" id="I5j-jA-xvX"/>
+                                            <constraint firstItem="Nkg-7z-PGf" firstAttribute="width" secondItem="Nkg-7z-PGf" secondAttribute="height" multiplier="1:1" id="TDd-hq-ejx"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="sZ2-NZ-htx">
+                                        <rect key="frame" x="0.0" y="122" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVU-tG-nEg">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fVU-tG-nEg" secondAttribute="height" multiplier="1:1" id="px7-d3-fOe"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-Na-EwK">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="p6Q-Na-EwK" secondAttribute="height" multiplier="1:1" id="YuN-E5-EEy"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-b6-00S">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="3bS-b6-00S" secondAttribute="height" multiplier="1:1" id="p8Z-bM-aWP"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3bS-b6-00S" firstAttribute="width" secondItem="3bS-b6-00S" secondAttribute="height" multiplier="1:1" id="EdG-2k-IXH"/>
+                                            <constraint firstItem="p6Q-Na-EwK" firstAttribute="width" secondItem="p6Q-Na-EwK" secondAttribute="height" multiplier="1:1" id="ZSU-kb-0Pe"/>
+                                            <constraint firstItem="3bS-b6-00S" firstAttribute="width" secondItem="3bS-b6-00S" secondAttribute="height" multiplier="1:1" id="l9j-86-DkA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="wMb-JE-OP7">
+                                <rect key="frame" x="196" y="346" width="198" height="172"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2AK-oy-kFi">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IP-EC-M46">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="6IP-EC-M46" secondAttribute="height" multiplier="1:1" id="PhR-36-mo3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xd5-Tz-EHq">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Xd5-Tz-EHq" secondAttribute="height" multiplier="1:1" id="vNE-8H-HgD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ddp-BJ-Ia6">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ddp-BJ-Ia6" secondAttribute="height" multiplier="1:1" id="B1k-ri-XlM"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ddp-BJ-Ia6" firstAttribute="width" secondItem="Ddp-BJ-Ia6" secondAttribute="height" multiplier="1:1" id="E7A-hT-87n"/>
+                                            <constraint firstItem="Xd5-Tz-EHq" firstAttribute="width" secondItem="Xd5-Tz-EHq" secondAttribute="height" multiplier="1:1" id="Gr6-jU-kd1"/>
+                                            <constraint firstItem="Ddp-BJ-Ia6" firstAttribute="width" secondItem="Ddp-BJ-Ia6" secondAttribute="height" multiplier="1:1" id="mXS-Pb-UEQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-5Y-9JP">
+                                        <rect key="frame" x="0.0" y="61" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-Az-Ylf">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qQb-Az-Ylf" secondAttribute="height" multiplier="1:1" id="x4t-VH-ofT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ap5-qv-8cV">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ap5-qv-8cV" secondAttribute="height" multiplier="1:1" id="57X-Z0-Ca2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zil-Ip-uLB">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Zil-Ip-uLB" secondAttribute="height" multiplier="1:1" id="bm6-K8-0o1"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ap5-qv-8cV" firstAttribute="width" secondItem="ap5-qv-8cV" secondAttribute="height" multiplier="1:1" id="PB5-uU-GhQ"/>
+                                            <constraint firstItem="Zil-Ip-uLB" firstAttribute="width" secondItem="Zil-Ip-uLB" secondAttribute="height" multiplier="1:1" id="Plb-cb-AvG"/>
+                                            <constraint firstItem="Zil-Ip-uLB" firstAttribute="width" secondItem="Zil-Ip-uLB" secondAttribute="height" multiplier="1:1" id="aae-He-c4M"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Nco-Q7-SuG">
+                                        <rect key="frame" x="0.0" y="122" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-AG-6gF">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TNx-AG-6gF" secondAttribute="height" multiplier="1:1" id="ale-SO-2Nr"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IB6-cd-uBo">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="IB6-cd-uBo" secondAttribute="height" multiplier="1:1" id="Axo-LW-Uiv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCl-jp-Ao7">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nCl-jp-Ao7" secondAttribute="height" multiplier="1:1" id="eWB-9D-Qp9"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nCl-jp-Ao7" firstAttribute="width" secondItem="nCl-jp-Ao7" secondAttribute="height" multiplier="1:1" id="1Zu-jd-X38"/>
+                                            <constraint firstItem="nCl-jp-Ao7" firstAttribute="width" secondItem="nCl-jp-Ao7" secondAttribute="height" multiplier="1:1" id="ZkP-3h-ABP"/>
+                                            <constraint firstItem="IB6-cd-uBo" firstAttribute="width" secondItem="IB6-cd-uBo" secondAttribute="height" multiplier="1:1" id="jAV-OI-Rcn"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="me8-S7-0Wu">
+                                <rect key="frame" x="196" y="557" width="198" height="172"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Hm8-8p-Fvs">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAG-by-S4Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XAG-by-S4Q" secondAttribute="height" multiplier="1:1" id="hIN-xX-ud5"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VR0-h8-Xle">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VR0-h8-Xle" secondAttribute="height" multiplier="1:1" id="dsj-JN-OXE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Me-xS-Pwq">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4Me-xS-Pwq" secondAttribute="height" multiplier="1:1" id="ERq-vO-3OR"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VR0-h8-Xle" firstAttribute="width" secondItem="VR0-h8-Xle" secondAttribute="height" multiplier="1:1" id="FC5-4H-rjg"/>
+                                            <constraint firstItem="4Me-xS-Pwq" firstAttribute="width" secondItem="4Me-xS-Pwq" secondAttribute="height" multiplier="1:1" id="GHC-F3-aUr"/>
+                                            <constraint firstItem="4Me-xS-Pwq" firstAttribute="width" secondItem="4Me-xS-Pwq" secondAttribute="height" multiplier="1:1" id="TnA-VR-mGX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="deC-44-0cl">
+                                        <rect key="frame" x="0.0" y="61" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUf-3U-RU3">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="NUf-3U-RU3" secondAttribute="height" multiplier="1:1" id="KHL-7o-4Sa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xn-i9-MBw">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1xn-i9-MBw" secondAttribute="height" multiplier="1:1" id="xgK-pm-LTK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEE-GQ-Qa6">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wEE-GQ-Qa6" secondAttribute="height" multiplier="1:1" id="YgI-pL-fcz"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1xn-i9-MBw" firstAttribute="width" secondItem="1xn-i9-MBw" secondAttribute="height" multiplier="1:1" id="AEm-Ba-qLJ"/>
+                                            <constraint firstItem="wEE-GQ-Qa6" firstAttribute="width" secondItem="wEE-GQ-Qa6" secondAttribute="height" multiplier="1:1" id="Ff4-5D-WOT"/>
+                                            <constraint firstItem="wEE-GQ-Qa6" firstAttribute="width" secondItem="wEE-GQ-Qa6" secondAttribute="height" multiplier="1:1" id="HSg-Dk-XGR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-lT-r9e">
+                                        <rect key="frame" x="0.0" y="122" width="198" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDg-JV-vme">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="dDg-JV-vme" secondAttribute="height" multiplier="1:1" id="ALI-Sy-isF"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyj-Ra-7tF">
+                                                <rect key="frame" x="74" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Fyj-Ra-7tF" secondAttribute="height" multiplier="1:1" id="wG1-I3-bcR"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WvT-l0-XK6">
+                                                <rect key="frame" x="148" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WvT-l0-XK6" secondAttribute="height" multiplier="1:1" id="3cY-XA-tWz"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Fyj-Ra-7tF" firstAttribute="width" secondItem="Fyj-Ra-7tF" secondAttribute="height" multiplier="1:1" id="QGH-CN-sFa"/>
+                                            <constraint firstItem="WvT-l0-XK6" firstAttribute="width" secondItem="WvT-l0-XK6" secondAttribute="height" multiplier="1:1" id="fU0-Uo-M2T"/>
+                                            <constraint firstItem="WvT-l0-XK6" firstAttribute="width" secondItem="WvT-l0-XK6" secondAttribute="height" multiplier="1:1" id="kTK-Vc-HlB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVD-Lf-FVv">
+                                <rect key="frame" x="20" y="141" width="49" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clothing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-aT-Wkx">
+                                <rect key="frame" x="20" y="346" width="97" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tools" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-G5-xPX">
+                                <rect key="frame" x="20" y="557" width="61" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="t4F-Fu-17k">
+                                <rect key="frame" x="20" y="173" width="126" height="115.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="RY7-si-Zud">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8O-T4-jYI">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAW-Py-2Y3">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="vY4-UR-8x5">
+                                        <rect key="frame" x="0.0" y="24.5" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgK-6O-hO5">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgL-gN-1cc">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-nj-r7U">
+                                        <rect key="frame" x="0.0" y="49" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV6-f5-Omc">
+                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDZ-FX-W84">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-W3-hSQ">
+                                        <rect key="frame" x="0.0" y="73.5" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSQ-N0-0Qs">
+                                                <rect key="frame" x="0.0" y="0.0" width="27.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNk-0U-fod">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-Lb-Fu3">
+                                        <rect key="frame" x="0.0" y="98" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mef-BA-uQh">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hng-9W-EGG">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="aZx-rf-c0r">
+                                <rect key="frame" x="20" y="378" width="126" height="115.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-DF-XSH">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlz-je-AwR">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwP-nJ-9iK">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="6lD-es-7EZ">
+                                        <rect key="frame" x="0.0" y="24.5" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmF-zY-cgm">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4v-KS-bEe">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-M6-Y1V">
+                                        <rect key="frame" x="0.0" y="49" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2j-D1-oKe">
+                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-d1-Umw">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="qQp-lV-CIW">
+                                        <rect key="frame" x="0.0" y="73.5" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uff-tQ-Rdd">
+                                                <rect key="frame" x="0.0" y="0.0" width="27.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPY-Sr-l1x">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="gEE-fT-ld8">
+                                        <rect key="frame" x="0.0" y="98" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPf-Iq-Cya">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbf-Lz-WYt">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="RWF-Jv-wof">
+                                <rect key="frame" x="20" y="589" width="126" height="115.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-7k-ysF">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63C-gC-sic">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygg-uB-DQa">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="Mdu-dn-nbb">
+                                        <rect key="frame" x="0.0" y="24.5" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-9P-DB0">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96E-XV-X4z">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="RAc-uH-maY">
+                                        <rect key="frame" x="0.0" y="49" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDj-A5-fJO">
+                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwG-j7-9hQ">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="hoy-RG-Xwl">
+                                        <rect key="frame" x="0.0" y="73.5" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr0-Ab-fum">
+                                                <rect key="frame" x="0.0" y="0.0" width="27.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsL-5y-uLo">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="kIr-oR-7sr">
+                                        <rect key="frame" x="0.0" y="98" width="126" height="17.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giW-Qh-X7s">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2w-3t-OB9">
+                                                <rect key="frame" x="116.5" y="0.0" width="9.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aWz-hn-oRC" firstAttribute="top" secondItem="F4K-FA-x9L" secondAttribute="top" constant="40" id="0M2-t4-LmZ"/>
+                            <constraint firstItem="aWz-hn-oRC" firstAttribute="centerX" secondItem="nNY-a0-vE5" secondAttribute="centerX" id="aRk-KF-mp5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="F4K-FA-x9L"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bag" id="EfI-rV-ocL"/>
+                    <connections>
+                        <outlet property="clothingImage1" destination="6IP-EC-M46" id="QyH-at-zNH"/>
+                        <outlet property="clothingImage2" destination="Xd5-Tz-EHq" id="GfX-1B-ER0"/>
+                        <outlet property="clothingItem1Label" destination="vlz-je-AwR" id="xoi-Q0-S50"/>
+                        <outlet property="clothingItem2Label" destination="gmF-zY-cgm" id="L8S-9N-aN1"/>
+                        <outlet property="clothingItem3Label" destination="c2j-D1-oKe" id="cCb-2A-Ylj"/>
+                        <outlet property="clothingItem4Label" destination="Uff-tQ-Rdd" id="NHM-KB-XH6"/>
+                        <outlet property="clothingItem5Label" destination="cPf-Iq-Cya" id="Bau-eW-3SO"/>
+                        <outlet property="clothingLabel" destination="gdB-aT-Wkx" id="cxw-tK-z6u"/>
+                        <outlet property="foodImage1" destination="E94-Pr-bnm" id="0n4-UJ-3Ib"/>
+                        <outlet property="foodImage2" destination="qPP-ZF-h5v" id="kHu-i0-lvH"/>
+                        <outlet property="foodItem1Label" destination="j8O-T4-jYI" id="F1N-U2-fdl"/>
+                        <outlet property="foodItem2Label" destination="sgK-6O-hO5" id="PeF-En-q9O"/>
+                        <outlet property="foodItem3Label" destination="mV6-f5-Omc" id="fTH-Mb-VCD"/>
+                        <outlet property="foodItem4Label" destination="GSQ-N0-0Qs" id="tVH-UK-w68"/>
+                        <outlet property="foodItem5Label" destination="mef-BA-uQh" id="Cnx-jQ-YIH"/>
+                        <outlet property="foodLabel" destination="hVD-Lf-FVv" id="eNo-xD-nLA"/>
+                        <outlet property="toolItem1Label" destination="63C-gC-sic" id="hat-2e-KLS"/>
+                        <outlet property="toolItem2Label" destination="GKX-9P-DB0" id="HZY-SX-rWc"/>
+                        <outlet property="toolItem3Label" destination="hDj-A5-fJO" id="GCT-TO-Rjz"/>
+                        <outlet property="toolItem4Label" destination="pr0-Ab-fum" id="1n6-nz-cVE"/>
+                        <outlet property="toolItem5Label" destination="giW-Qh-X7s" id="35h-IO-MbU"/>
+                        <outlet property="toolsImage1" destination="XAG-by-S4Q" id="vXU-6g-P10"/>
+                        <outlet property="toolsImage2" destination="VR0-h8-Xle" id="l4g-it-Pqj"/>
+                        <outlet property="toolsLabel" destination="MgU-G5-xPX" id="Fof-B6-vfW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZs-hN-wS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="138"/>
+            <point key="canvasLocation" x="1960.8695652173915" y="137.94642857142856"/>
         </scene>
         <!--Character-->
         <scene sceneID="VdU-RO-lUm">
