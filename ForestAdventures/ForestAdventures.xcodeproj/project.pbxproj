@@ -15,6 +15,7 @@
 		1C96B0472458C8B400BCC99E /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B0462458C8B400BCC99E /* PlayerController.swift */; };
 		1C96B0492458C8C400BCC99E /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B0482458C8C400BCC99E /* ItemController.swift */; };
 		1C96B04B2458C8CF00BCC99E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B04A2458C8CF00BCC99E /* UserController.swift */; };
+		1C96B04D2459EE7400BCC99E /* BagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B04C2459EE7400BCC99E /* BagViewController.swift */; };
 		857D768A2459143000B7C869 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D76892459143000B7C869 /* SignInVC.swift */; };
 		85F1AA6324578689008B6EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1AA6224578689008B6EAA /* AppDelegate.swift */; };
 		85F1AA6524578689008B6EAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1AA6424578689008B6EAA /* SceneDelegate.swift */; };
@@ -33,6 +34,7 @@
 		1C96B0462458C8B400BCC99E /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		1C96B0482458C8C400BCC99E /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 		1C96B04A2458C8CF00BCC99E /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		1C96B04C2459EE7400BCC99E /* BagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewController.swift; sourceTree = "<group>"; };
 		857D76892459143000B7C869 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		85F1AA5F24578689008B6EAA /* ForestAdventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestAdventures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F1AA6224578689008B6EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = ModelControllers;
 			sourceTree = "<group>";
 		};
+		1C96B04E2459EE7900BCC99E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C96B04C2459EE7400BCC99E /* BagViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		85F1AA5624578689008B6EAA = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 				1C96B0402458C06600BCC99E /* Models */,
 				1C96B0452458C8A200BCC99E /* ModelControllers */,
 				85F1AA6824578689008B6EAA /* Main.storyboard */,
+				1C96B04E2459EE7900BCC99E /* ViewControllers */,
 				85F1AA6B24578689008B6EAA /* Assets.xcassets */,
 				85F1AA6D24578689008B6EAA /* LaunchScreen.storyboard */,
 				85F1AA7024578689008B6EAA /* Info.plist */,
@@ -192,6 +203,7 @@
 				85F1AA6324578689008B6EAA /* AppDelegate.swift in Sources */,
 				85F1AA6524578689008B6EAA /* SceneDelegate.swift in Sources */,
 				1C96B0492458C8C400BCC99E /* ItemController.swift in Sources */,
+				1C96B04D2459EE7400BCC99E /* BagViewController.swift in Sources */,
 				1C96B0422458C81E00BCC99E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
