@@ -15,10 +15,12 @@
 		1C96B0472458C8B400BCC99E /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B0462458C8B400BCC99E /* PlayerController.swift */; };
 		1C96B0492458C8C400BCC99E /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B0482458C8C400BCC99E /* ItemController.swift */; };
 		1C96B04B2458C8CF00BCC99E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B04A2458C8CF00BCC99E /* UserController.swift */; };
-		857D768A2459143000B7C869 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D76892459143000B7C869 /* SignInVC.swift */; };
+		857D768A2459143000B7C869 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D76892459143000B7C869 /* AuthenticationVC.swift */; };
+		857D768E2459E9E300B7C869 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D768D2459E9E300B7C869 /* APIController.swift */; };
+		857D76912459EA5200B7C869 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D76902459EA5200B7C869 /* Bearer.swift */; };
+		857D7693245A399100B7C869 /* StoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D7692245A399100B7C869 /* StoryVC.swift */; };
 		85F1AA6324578689008B6EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1AA6224578689008B6EAA /* AppDelegate.swift */; };
 		85F1AA6524578689008B6EAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1AA6424578689008B6EAA /* SceneDelegate.swift */; };
-		85F1AA6724578689008B6EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1AA6624578689008B6EAA /* ViewController.swift */; };
 		85F1AA6A24578689008B6EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F1AA6824578689008B6EAA /* Main.storyboard */; };
 		85F1AA6C24578689008B6EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F1AA6B24578689008B6EAA /* Assets.xcassets */; };
 		85F1AA6F24578689008B6EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F1AA6D24578689008B6EAA /* LaunchScreen.storyboard */; };
@@ -33,11 +35,13 @@
 		1C96B0462458C8B400BCC99E /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		1C96B0482458C8C400BCC99E /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 		1C96B04A2458C8CF00BCC99E /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
-		857D76892459143000B7C869 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		857D76892459143000B7C869 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
+		857D768D2459E9E300B7C869 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		857D76902459EA5200B7C869 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		857D7692245A399100B7C869 /* StoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVC.swift; sourceTree = "<group>"; };
 		85F1AA5F24578689008B6EAA /* ForestAdventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestAdventures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F1AA6224578689008B6EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F1AA6424578689008B6EAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85F1AA6624578689008B6EAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85F1AA6924578689008B6EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85F1AA6B24578689008B6EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F1AA6E24578689008B6EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 				1C96B03C2458C05300BCC99E /* PlayerModel.swift */,
 				1C96B03E2458C05C00BCC99E /* ItemModel.swift */,
 				1C96B0412458C81E00BCC99E /* User.swift */,
+				857D76902459EA5200B7C869 /* Bearer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -75,6 +80,15 @@
 				1C96B04A2458C8CF00BCC99E /* UserController.swift */,
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		857D768F2459EA2D00B7C869 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				857D76892459143000B7C869 /* AuthenticationVC.swift */,
+				857D7692245A399100B7C869 /* StoryVC.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		85F1AA5624578689008B6EAA = {
@@ -98,14 +112,14 @@
 			children = (
 				85F1AA6224578689008B6EAA /* AppDelegate.swift */,
 				85F1AA6424578689008B6EAA /* SceneDelegate.swift */,
-				85F1AA6624578689008B6EAA /* ViewController.swift */,
+				857D768D2459E9E300B7C869 /* APIController.swift */,
 				1C96B0402458C06600BCC99E /* Models */,
+				857D768F2459EA2D00B7C869 /* Views */,
 				1C96B0452458C8A200BCC99E /* ModelControllers */,
 				85F1AA6824578689008B6EAA /* Main.storyboard */,
 				85F1AA6B24578689008B6EAA /* Assets.xcassets */,
 				85F1AA6D24578689008B6EAA /* LaunchScreen.storyboard */,
 				85F1AA7024578689008B6EAA /* Info.plist */,
-				857D76892459143000B7C869 /* SignInVC.swift */,
 			);
 			path = ForestAdventures;
 			sourceTree = "<group>";
@@ -183,16 +197,18 @@
 			files = (
 				1C96B0442458C89A00BCC99E /* RoomController.swift in Sources */,
 				1C96B03F2458C05C00BCC99E /* ItemModel.swift in Sources */,
-				857D768A2459143000B7C869 /* SignInVC.swift in Sources */,
+				857D768A2459143000B7C869 /* AuthenticationVC.swift in Sources */,
+				857D768E2459E9E300B7C869 /* APIController.swift in Sources */,
 				1C96B03B2458C04B00BCC99E /* RoomModel.swift in Sources */,
 				1C96B04B2458C8CF00BCC99E /* UserController.swift in Sources */,
 				1C96B03D2458C05300BCC99E /* PlayerModel.swift in Sources */,
 				1C96B0472458C8B400BCC99E /* PlayerController.swift in Sources */,
-				85F1AA6724578689008B6EAA /* ViewController.swift in Sources */,
 				85F1AA6324578689008B6EAA /* AppDelegate.swift in Sources */,
+				857D76912459EA5200B7C869 /* Bearer.swift in Sources */,
 				85F1AA6524578689008B6EAA /* SceneDelegate.swift in Sources */,
 				1C96B0492458C8C400BCC99E /* ItemController.swift in Sources */,
 				1C96B0422458C81E00BCC99E /* User.swift in Sources */,
+				857D7693245A399100B7C869 /* StoryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
