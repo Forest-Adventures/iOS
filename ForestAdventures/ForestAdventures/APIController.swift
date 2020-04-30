@@ -16,7 +16,7 @@ enum HTTPMethod: String {
 
 class APIController {
     
-            let signInURL = URL(string: "https://forest-adventure-mud.herokuapp.com/api-token-auth/")!
+    let signInURL = URL(string: "https://forest-adventure-mud.herokuapp.com/api-token-auth/")!
     private let registerURL = URL(string: "https://forest-adventure-mud.herokuapp.com/api/accounts/")
     var bearer: Bearer?
     
@@ -101,5 +101,5 @@ class APIController {
         }.resume()
     }
     
-//    func setLoginToken(_ )
+    //    func setLoginToken(_ )
 }
