@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xBh-BR-4Ge">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="do3-pJ-bvS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Story-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StoryVC" customModule="ForestAdventures" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ForestAdventures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,9 +26,6 @@
                     <tabBarItem key="tabBarItem" title="Story" id="JWC-kw-4Tm">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
-                    <connections>
-                        <segue destination="do3-pJ-bvS" kind="presentation" identifier="AuthSegue" id="AAN-Wg-oNa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -700,8 +697,8 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="rmm-10-NVv"/>
                                                 </constraints>
                                                 <segments>
-                                                    <segment title="Sign In"/>
                                                     <segment title="Sign Up"/>
+                                                    <segment title="Sigh In"/>
                                                 </segments>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="selectedSegmentTintColor" red="0.22768356840000001" green="0.52282281090000005" blue="0.24104620760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -785,14 +782,13 @@
                     <navigationItem key="navigationItem" id="Lcc-oD-rAV"/>
                     <connections>
                         <outlet property="authSegmentedControl" destination="81W-Va-JWI" id="jGH-bC-xdr"/>
+                        <outlet property="emailTextField" destination="9LQ-sg-ug5" id="amA-ZX-XiR"/>
                         <outlet property="passwordTextField" destination="Exn-fZ-VUN" id="bRE-g7-s2M"/>
-                        <outlet property="submitButton" destination="H89-GM-mac" id="AbC-Xu-21C"/>
-                        <outlet property="usernameTextField" destination="9LQ-sg-ug5" id="amA-ZX-XiR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yk2-1t-YrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="-563"/>
+            <point key="canvasLocation" x="-688.40579710144937" y="133.92857142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RsS-PD-GIN">
