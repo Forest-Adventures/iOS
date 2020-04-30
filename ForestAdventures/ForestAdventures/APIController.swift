@@ -58,6 +58,13 @@ class APIController {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 print("Bearer:", self.bearer)
+                
+//                let token = self.bearer
+//
+//               UserDefaults.standard.set(token, forKey: "Bearer")
+//                print(defaults)
+                
+                
             } catch {
                 print("Error decoding bearer token: \(error)")
                 completion(error)
@@ -101,5 +108,5 @@ class APIController {
         }.resume()
     }
     
-    //    func setLoginToken(_ )
+    
 }
