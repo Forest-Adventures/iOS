@@ -13,6 +13,9 @@
 		1C96B0472458C8B400BCC99E /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B0462458C8B400BCC99E /* PlayerController.swift */; };
 		1C96B0492458C8C400BCC99E /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B0482458C8C400BCC99E /* ItemController.swift */; };
 		1C96B04B2458C8CF00BCC99E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C96B04A2458C8CF00BCC99E /* UserController.swift */; };
+		1C96B050245C969A00BCC99E /* MapScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1C96B04F245C969A00BCC99E /* MapScene.sks */; };
+		1C96B053245C983300BCC99E /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1C96B051245C983300BCC99E /* MyTileSet.sks */; };
+		1C96B054245C983300BCC99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C96B052245C983300BCC99E /* Assets.xcassets */; };
 		857D768A2459143000B7C869 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D76892459143000B7C869 /* AuthenticationVC.swift */; };
 		857D768E2459E9E300B7C869 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D768D2459E9E300B7C869 /* APIController.swift */; };
 		857D76912459EA5200B7C869 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D76902459EA5200B7C869 /* Bearer.swift */; };
@@ -33,6 +36,9 @@
 		1C96B0462458C8B400BCC99E /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		1C96B0482458C8C400BCC99E /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 		1C96B04A2458C8CF00BCC99E /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		1C96B04F245C969A00BCC99E /* MapScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MapScene.sks; sourceTree = "<group>"; };
+		1C96B051245C983300BCC99E /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
+		1C96B052245C983300BCC99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		857D76892459143000B7C869 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		857D768D2459E9E300B7C869 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		857D76902459EA5200B7C869 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				857D76892459143000B7C869 /* AuthenticationVC.swift */,
 				857D7692245A399100B7C869 /* StoryVC.swift */,
 				857D76EA245C1FDC00B7C869 /* MapVC.swift */,
+				1C96B04F245C969A00BCC99E /* MapScene.sks */,
+				1C96B051245C983300BCC99E /* MyTileSet.sks */,
+				1C96B052245C983300BCC99E /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +194,9 @@
 				85F1AA6F24578689008B6EAA /* LaunchScreen.storyboard in Resources */,
 				85F1AA6C24578689008B6EAA /* Assets.xcassets in Resources */,
 				85F1AA6A24578689008B6EAA /* Main.storyboard in Resources */,
+				1C96B053245C983300BCC99E /* MyTileSet.sks in Resources */,
+				1C96B054245C983300BCC99E /* Assets.xcassets in Resources */,
+				1C96B050245C969A00BCC99E /* MapScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

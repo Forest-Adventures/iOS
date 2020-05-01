@@ -158,4 +158,44 @@ class APIController {
             }
         }
     
+    func move(direction: String, completion: @escaping (Result<String, NetworkError>) -> Void)  {
+        guard let bearer = bearer else { return }
+        
+        let moveUrl = URL(string: "https://forest-mud-adventure.herokuapp.com/api/adv/move/")!
+        
+        var request = URLRequest(url: moveUrl)
+        request.httpMethod = "POST"
+        request.addValue("Token \(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badData))
+                return
+            }
+            
+            if let error = error {
+                print("Error recieving data \(error)")
+                completion(.failure(.badData))
+            }
+            
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            let encoder = JSONEncoder()
+            
+            do {
+                let JSONData = try encoder.encode(direction)
+            } catch {
+                completion(.failure(.otherError))
+                return
+            }
+            completion(.failure(.badData))
+        }.resume()
+        
+        
+    }
+    
 }

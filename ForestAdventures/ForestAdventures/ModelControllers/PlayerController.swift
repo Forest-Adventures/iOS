@@ -9,5 +9,12 @@
 import Foundation
 
 class PlayerController {
+//    var apiController = APIController()
+//    var room: Room?
+//    var rooms: [RoomMain]?
+//    
+//    var currentRoom: Room
+    
+    
     
 }

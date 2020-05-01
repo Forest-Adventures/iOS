@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import SpriteKit
 
 class MapVC: UIViewController {
     
     //    fileprivate var rooms: [Room] = []
-    
+    var tileSet
     @IBOutlet weak var gridView: UIView!
     
     var apiController = APIController()
@@ -50,7 +51,7 @@ class MapVC: UIViewController {
             roomCoordArr.append(roomCoords)
             print("This is our array of room coords: ", roomCoordArr)
             
-            for coord in roomCoords {
+    
                 DispatchQueue.main.async {
                     print("Here: ", room.name, roomX, roomY)
                     
@@ -60,15 +61,17 @@ class MapVC: UIViewController {
                     //                    let roomYOffset = CGPoint(x: roomY, y: roomY + 20)
                     //
                     
-                    let layerView = UIView(frame: CGRect(x: coor, y: roomY, width: 24, height: 24).offsetBy(dx: 80, dy: 80))
+                    
+                    let layerView = UIView(frame: CGRect(x: roomX, y: roomY, width: 24, height: 24).offsetBy(dx: 80, dy: 80))
                     layerView.backgroundColor = .orange
                     self.gridView.addSubview(layerView)
                     self.gridView.layer.borderColor = UIColor.purple.cgColor
                     self.gridView.layer.borderWidth = 5
                     
                     
+                    
                 }
-            }
+            
             
         }
     }
@@ -86,6 +89,45 @@ class MapVC: UIViewController {
         print(viewFrame.size.width, viewFrame.size.height)
         gridView.frame = viewFrame
         
+        
+    }
+    
+    
+    func drawSquares() {
+        
+        var centerx = apiController.rooms[0].x
+        var centery = apiController.rooms[0].y
+        var num = 1
+        
+        
+        for room in apiController.rooms {
+            if apiController.rooms[num].x > centerx || apiController.rooms[num].y == centery {
+                drawEast()
+                num += 1
+            } else if apiController.rooms[num].x == centerx || apiController.rooms[num].y > centery {
+                drawNorth()
+                num += 1
+            } else if apiController.rooms[num].x == centerx || apiController.rooms[num].y > centery {
+                
+            }
+            
+        }
+        
+    }
+    
+    func drawNorth() {
+        
+    }
+    
+    func drawEast() {
+        
+    }
+    
+    func drawWest() {
+        
+    }
+    
+    func drawSouth() {
         
     }
     
