@@ -14,8 +14,18 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
+enum NetworkError: Error {
+    case otherError
+    case badData
+    case noDecode
+}
+
 class APIController {
     
+    var room: Room?
+    var rooms: [Room] = []
+    
+    let roomsURL = "https://forest-mud-adventure.herokuapp.com/api/adv/rooms"
     let signInURL = URL(string: "https://forest-adventure-mud.herokuapp.com/api-token-auth/")!
     private let registerURL = URL(string: "https://forest-adventure-mud.herokuapp.com/api/accounts/")
     var bearer: Bearer?
@@ -58,11 +68,6 @@ class APIController {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 print("Bearer:", self.bearer)
-                
-//                let token = self.bearer
-//
-//               UserDefaults.standard.set(token, forKey: "Bearer")
-//                print(defaults)
                 
                 
             } catch {
@@ -108,5 +113,49 @@ class APIController {
         }.resume()
     }
     
+     func getRooms(completion: @escaping (Result<[Room], NetworkError>) -> Void) {
+            // Create URL
+            
+            if let url = URL(string: roomsURL) {
+                
+                // Create a URLSession
+                
+                let session = URLSession(configuration: .default)
+                
+                // Give the session a task
+                
+                let task = session.dataTask(with: url) { (data, response, error) in
+                    guard let data = data else {
+                        print("No data or bad data returned")
+                        completion(.failure(.otherError))
+                        return
+                    }
+                    
+                    if let error = error {
+                        print("Error: ", error)
+                        completion(.failure(.badData))
+                        return
+                    }
+                    
+                    do {
+                        let jsonDecoder = JSONDecoder()
+                        let roomMain = try jsonDecoder.decode(RoomMain.self, from: data)
+                        self.rooms = roomMain.rooms
+    //                    print(self.rooms)
+    //                    for room in self.rooms {
+    //                        print(room.name)
+    //                    }
+                        
+                        completion(.success(self.rooms))
+                    } catch {
+                        print("error: ", error)
+                    }
+                }
+                
+                // Start the task
+                
+                task.resume()
+            }
+        }
     
 }
