@@ -74,13 +74,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I96-fp-v7o">
-                                <rect key="frame" x="87" y="342" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I96-fp-v7o">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I96-fp-v7o" firstAttribute="top" secondItem="xru-Oi-fOE" secondAttribute="top" id="FI0-rB-bXv"/>
+                            <constraint firstItem="xru-Oi-fOE" firstAttribute="trailing" secondItem="I96-fp-v7o" secondAttribute="trailing" id="H3s-TY-cKa"/>
+                            <constraint firstItem="I96-fp-v7o" firstAttribute="leading" secondItem="xru-Oi-fOE" secondAttribute="leading" id="kMM-qN-gJ5"/>
+                            <constraint firstItem="xru-Oi-fOE" firstAttribute="bottom" secondItem="I96-fp-v7o" secondAttribute="bottom" id="rsZ-vn-j3n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xru-Oi-fOE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="0EE-3r-gAd"/>

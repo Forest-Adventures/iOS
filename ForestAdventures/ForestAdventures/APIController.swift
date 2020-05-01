@@ -84,7 +84,7 @@ class APIController {
     func signUp(with user: User, completion: @escaping (Error?) -> ()) {
         
         var request = URLRequest(url: registerURL!)
-        request.httpMethod = HTTPMethod.post.rawValue
+        request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let encoder = JSONEncoder()
