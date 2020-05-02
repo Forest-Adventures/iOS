@@ -198,4 +198,55 @@ class APIController {
         
     }
     
+    func movePlayer(input: String) {
+        var currentRoomNum = 0
+        var currentRoom = rooms[currentRoomNum]
+        var currentRoomId = currentRoom.id
+        
+        if input == "N" {
+            //check if there is room to North, by n_to Int?
+            //var currentRoom = currentRoom
+            if currentRoom.n_to == 0 {
+                //change current roomNum to that rooms num
+                currentRoomNum += 1
+            } else {
+            //else print("You can't go that way")
+                print("You can't go North from here")
+                
+            }
+            
+        } else if input == "E" {
+            //check if there is a room to the East
+            if currentRoom.e_to == 0 {
+               //change current roomNum to that rooms num
+                currentRoomNum += 1
+            } else {
+              //else print("You cant go East from here")
+                print("You can't go East from here")
+            }
+        
+        } else if input == "W" {
+            //check if there is a room to the West
+            if currentRoom.w_to == 0 {
+               //change current room num to that rooms num
+                currentRoomNum += 1
+            } else {
+               //else print("You can't move west from here")
+                print("YOu can't move west from here")
+            }
+            
+        } else {
+            //Check if there is a room to the SOuth
+            if currentRoom.s_to == 0 {
+               //change current room num to taht rooms num
+                currentRoomNum += 1
+            } else {
+                //else print("You cant go south from here")
+                print("You can't go south from here")
+            }
+            
+        }
+    }
+    
+        
 }

@@ -12,7 +12,7 @@ import SpriteKit
 class MapVC: UIViewController {
     
     //    fileprivate var rooms: [Room] = []
-    var tileSet
+    //var tileSet
     @IBOutlet weak var gridView: UIView!
     
     var apiController = APIController()
@@ -95,6 +95,10 @@ class MapVC: UIViewController {
     
     func drawSquares() {
         
+        var widthSize = 2.0
+        var heightSize = 2.0
+        var colorChoice = UIColor.orange
+        
         var centerx = apiController.rooms[0].x
         var centery = apiController.rooms[0].y
         var num = 1
@@ -107,8 +111,12 @@ class MapVC: UIViewController {
             } else if apiController.rooms[num].x == centerx || apiController.rooms[num].y > centery {
                 drawNorth()
                 num += 1
-            } else if apiController.rooms[num].x == centerx || apiController.rooms[num].y > centery {
-                
+            } else if apiController.rooms[num].x < centerx || apiController.rooms[num].y == centery {
+                drawWest()
+                num += 1
+            } else {
+                drawSouth()
+                num += 1
             }
             
         }
@@ -116,19 +124,35 @@ class MapVC: UIViewController {
     }
     
     func drawNorth() {
+        //check if coming from south
         
+        //check if coming from east
+        
+        //check if coming from west
     }
     
     func drawEast() {
+        //check if coming from south
         
+        //check if coming from North
+        
+        //check if coming from west
     }
     
     func drawWest() {
+        //check if coming from south
         
+        //check if coming from east
+        
+        //check if coming from North
     }
     
     func drawSouth() {
+        //check if coming from north
         
+        //check if coming from east
+        
+        //check if coming from west
     }
     
 }
